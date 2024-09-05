@@ -1,11 +1,11 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    font-size: x-large;
 }
 
 .block-quote{
     background-color: rgb(253, 214, 163);
-    width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.309);
 }
 
@@ -15,6 +15,10 @@ blockquote > p{
     text-transform: capitalize;
     text-decoration: none;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header{
+    margin: 10px;
 }
 
 .uno{
@@ -75,6 +79,87 @@ blockquote > p{
     position: absolute;
     top: 400px;
     left: 350px;
+}
+
+.grid-container{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-content: baseline;
+    gap: 10px;
+}
+
+.grid-item{
+    border-radius: 5px;
+    border: 2px solid rgba(26, 26, 26, 0.636);
+    text-align: center;
+    background-color: rgb(84, 107, 154);
+    width: 150px;
+    /* padding: 10px; */
+}
+
+.animacion, .mover {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    text-align: center;
+}
+
+.animacion {
+    background-color: rgb(191, 91, 91);
+    transition: 0.5s ease;
+}
+
+.animacion:hover {
+    background-color: rgb(249, 116, 0);
+}
+
+.mover {
+    background-color: lightgreen;
+    animation: mover 1s reverse infinite;
+    border-radius: 1000px;
+}
+
+.otro{
+    width: 100%;
+}
+
+@keyframes mover {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body{
+        background-color: rgb(143, 162, 217);
+    }
+    h1{
+        font-size: small;
+    }
+
+    header, section, div{
+        padding: 2px;
+        margin: 5px;
+        width: 100%;
+    }
+
+    
 }
 
 
